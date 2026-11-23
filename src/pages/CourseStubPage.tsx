@@ -5,6 +5,7 @@ import { catalog, type CatalogCourse } from '../content/catalog';
 import { recordCourseView } from '../lib/recentCourses';
 import { useToc } from '../lib/toc';
 import ThemeToggle from '../components/ThemeToggle';
+import DataStructureResource from '../components/DataStructureResource';
 import { IconArrowLeft } from '../components/icons';
 
 /** 未上线课程的统一落地页：自带简易导航栏（不继承首页导航），展示资料统计与建设状态 */
@@ -69,6 +70,7 @@ export default function CourseStubPage() {
         ) : (
           <p className="lede">未找到这门课的资料记录。</p>
         )}
+        {name === '数据结构' && <DataStructureResource />}
         <p className="hub-stub-back">
           <Link to="/">← 返回课程目录</Link>
         </p>
