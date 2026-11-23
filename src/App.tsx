@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useParams } from 'react-router-dom';
 import CourseHubPage from './pages/CourseHubPage';
 import CourseStubPage from './pages/CourseStubPage';
 import { ALGO_BASE, OS_BASE, NET_BASE, PAT_BASE, AI_BASE, SA_BASE, PHYS_BASE, CA_BASE, MATH_BASE, PD_BASE, NCD_BASE, NAP_BASE, HD_BASE, MC_BASE, NLU_BASE, OSCD_BASE, CPD_BASE, NTR_BASE, CV_BASE, SPM_BASE, BD_BASE, CAP_BASE, AIE_BASE, SEC_BASE, DB_BASE, SE_BASE, ST_BASE, DP_BASE, SWT_BASE, DSD_BASE, IP_BASE } from './courses/registry';
+import { DS_BASE } from './courses/registry';
 import { ErrataProvider } from './lib/errata/context';
 
 /** 课程按需加载：首屏只载首页，进入课程时再拉取课程包 */
@@ -36,6 +37,7 @@ const StCourse = lazy(() => import('./courses/StCourse'));
 const DpCourse = lazy(() => import('./courses/DpCourse'));
 const SwtCourse = lazy(() => import('./courses/SwtCourse'));
 const DsdCourse = lazy(() => import('./courses/DsdCourse'));
+const DsCourse = lazy(() => import('./courses/DsCourse'));
 const IpCourse = lazy(() => import('./courses/IpCourse'));
 
 /** 旧版单课程链接 → /algo/*（历史收藏与外链不失效） */
@@ -88,6 +90,7 @@ export default function App() {
         <Route path={`${SWT_BASE}/*`} element={<SwtCourse />} />
         <Route path={`${DSD_BASE}/*`} element={<DsdCourse />} />
         <Route path={`${IP_BASE}/*`} element={<IpCourse />} />
+        <Route path={`${DS_BASE}/*`} element={<DsCourse />} />
         <Route path="/course/:name/*" element={<CourseStubPage />} />
         <Route path="/deck/:deckId" element={<LegacyDeckRedirect />} />
         <Route path="/practice" element={<Navigate to={`${ALGO_BASE}/practice`} replace />} />

@@ -264,6 +264,14 @@ export const courses: readonly CourseEntry[] = [
     ready: true,
     source: '创新实践结课报告 · 课件与试题未收录',
   },
+  {
+    id: 'data-structures',
+    name: '数据结构',
+    semester: '大一下',
+    base: '/ds',
+    ready: true,
+    source: '69 个交互演示 · Cynthia Wang',
+  },
 ];
 
 /** 首页/占位页用的未上线课程路由前缀 */
@@ -362,6 +370,8 @@ export const DSD_BASE = courses[29].base;
 
 /** 创新实践课路由前缀（同上约定） */
 export const IP_BASE = courses[30].base;
+
+export const DS_BASE = '/ds';
 
 export function findCourseByName(name: string): CourseEntry | undefined {
   return courses.find((c) => c.name === name);

@@ -70,7 +70,7 @@ export default function CourseStubPage() {
         ) : (
           <p className="lede">未找到这门课的资料记录。</p>
         )}
-        {name === '数据结构' && <DataStructureResource />}
+        {name === '数据结构' && <><Link to="/ds">进入数据结构交互演示</Link><DataStructureResource /></>}
         <p className="hub-stub-back">
           <Link to="/">← 返回课程目录</Link>
         </p>
