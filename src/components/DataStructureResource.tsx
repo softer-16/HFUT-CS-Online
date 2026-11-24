@@ -1,7 +1,7 @@
 export default function DataStructureResource() {
   return (
     <section aria-label="数据结构交互学习资源">
-      <h2>交互学习资源</h2>
+      <h2>数据结构可视化动画</h2>
       <p>
         <a href="https://softer-16.github.io/data-structure-simulator/" target="_blank" rel="noreferrer">
           数据结构算法可视化交互模拟器
